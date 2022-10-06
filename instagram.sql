@@ -111,14 +111,6 @@ select tags.*from tags join photo_tags on tags.id=photo_tags.tag_id group by tag
  /*answer 2*/
  SELECT tag_name, COUNT(tag_name) AS total from tags join photo_tags on tags.id = photo_tags.tag_id group by tags.id order by total DESC LIMIT 5;
 
- 
- 
- 
-
- 
-
-
-
 /*5) What day of the week do most users register on? Provide insights on when to schedule an ad campaign*/
 SELECT dayname(created_at) as Day,COUNT(id) AS Registrations FROM users GROUP BY day ORDER BY Registrations desc limit 2;
 
